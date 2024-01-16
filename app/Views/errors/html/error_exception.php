@@ -232,7 +232,7 @@ $errorId = uniqid('error', true);
                         </tr>
                         <tr>
                             <td>IP Address</td>
-                            <td><?= esc($request->getIPAddress()) ?></td>
+                            <td>Kocak Nggarai Error</td>
                         </tr>
                         <tr>
                             <td style="width: 10em">Is AJAX Request?</td>
