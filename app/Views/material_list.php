@@ -29,7 +29,7 @@
                                     <td><?= ($i + 1) ?></td>
                                     <td><?= substr(strip_tags($question->question_text), 0, 150) ?></td>
                                     <td>
-                                        <a class="btn btn-primary btn-xs" href="<?= base_url("package/$question->package_id/question/$question->id/view") ?>" title="Lihat soal dan analisis"><i class="fas fa-fw fa-poll"></i></a>
+                                        <a class="btn btn-primary btn-xs" href="<?= base_url("package/$question->package_id/question/$question->id/edit") ?>" title="Lihat soal dan analisis"><i class="fas fa-fw fa-poll"></i></a>
                                         <button class="btn btn-danger btn-xs btn-delete" data-qindex_id="<?= $question->id ?>"><i class="fas fa-fw fa-trash"></i></button>
                                     </td>
                                 </tr>

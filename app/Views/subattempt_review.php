@@ -92,8 +92,8 @@
                                 <tr>
                                     <td><?= ($i + 1) ?></td>
                                     <td><?= $answer->question_id ?></td>
-                                    <td><?= pilgan($answer->selected_id) ?></td>
-                                    <td><?= pilgan($answer->key_id) ?></td>
+                                    <td><?= $answer->selected_id ?></td>
+                                    <td><?= $answer->key_id ?></td>
                                     <td><?= $answer->marks ?></td>
                                 </tr>
                             <?php endforeach; ?>

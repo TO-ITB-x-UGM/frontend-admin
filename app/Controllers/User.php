@@ -105,9 +105,11 @@ class User extends BaseController
         
         if (!$xlsx->isValid()) {
             throw new \RuntimeException($xlsx->getErrorString() . '(' . $xlsx->getError() . ')');
-        }else if (!preg_match("/\.(xlsx|csv)$/", $xlsx)){
-            echo "hoaks";
-        }else{
+        }
+        // else if (!preg_match("/\.(xlsx|csv)$/", $xlsx)){
+        //     echo "hoaks";
+        // }
+        else{
         
 
             $newName = $xlsx->getRandomName();
@@ -128,9 +130,10 @@ class User extends BaseController
                 $finaldata[] = [
                     'name'          => $row['A'],
                     'email'         => $row['B'],
-                    'school'        => $row['C'],
-                    'phone_number'  => $row['D'],
-                    'role_id'       => $row['E']
+                    'password'      => password_hash(strval($row['C']), PASSWORD_DEFAULT),
+                    'school'        => $row['D'],
+                    'phone_number'  => $row['E'],
+                    'role_id'       => $row['F']
                 ];
             }
 
